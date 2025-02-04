@@ -1,40 +1,90 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// Keyframe animations
+const pulse = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+`;
+
+const rotate = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
 export const StyledButton = styled.button`
   color: ${(props) => (props.variant === "outline" ? "red" : "white")};
   background-color: ${(props) =>
     props.variant === "outline" ? "green" : "red"};
   transition: 0.5s all ease-in-out;
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 2.5rem;
   outline: none;
   border: none;
   text-align: center;
   border-radius: 0.4rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
   &:hover {
     background-color: #4798e9;
+    transform: scale(1.1);
   }
 `;
 
+// Fancy Button with CRAZY hover effects
 export const FancyButton = styled(StyledButton)`
-  background-image: linear-gradient(to right, red 0%, orange 100%);
-  transform: skew(-5deg, -5deg);
+  background-image: linear-gradient(to right, #00adef 0%, #00cbef 100%);
+  /* transform: skew(-5deg, -5deg); */
+  position: relative;
+  transition: 0.4s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    transform: scale(1.2);
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+  }
 
   &:hover {
-    background-image: linear-gradient(to right, orange 0%, red 100%);
+    background-image: linear-gradient(to right, #00cbef 0%, #00adef 100%);
+    animation: ${pulse} 0.4s ease-in-out alternate infinite;
+    transform: skew(5deg, 5deg) scale(1.1);
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: scale(1);
   }
 `;
 
-export const DarkButton = styled(StyledButton)`
-  background-color: ${(props) => props.theme.dark.primary};
+// Button that rotates on hover
+export const CrazyRotateButton = styled(StyledButton)`
+  background-image: linear-gradient(135deg, #ff007f, #ffba00);
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    animation: ${rotate} 1s linear infinite;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
 `;
 
-export const GiveButton = styled(StyledButton)`
-  background-color: ${(props) => props.theme.dark.secondary};
-`;
-export const GiveButtonLong = styled(StyledButton)`
-  background-color: ${(props) => props.theme.dark.secondary};
-  width: 100%;
-`;
-export const GetStartedButton = styled(StyledButton)`
-  background-color: #fdf0dd;
- 
+// Glow effect button
+export const GlowButton = styled(StyledButton)`
+  background: linear-gradient(45deg, #00cbef, #00adef);
+  box-shadow: 0 0 5px #ff416c, 0 0 25px #ff4b2b;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 20px #ff416c, 0 0 40px #ff4b2b;
+    transform: scale(1.1);
+  }
 `;

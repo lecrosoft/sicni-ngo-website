@@ -1,6 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import CausesPage from "./pages/CausesPage";
+import GalleryPage from "./pages/GalleryPage";
 
 const App = () => {
   const theme = {
@@ -41,6 +45,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/contact" element={<ContactPage />}></Route>
+          <Route path="/causes" element={<CausesPage />}></Route>
+          <Route path="/gallery" element={<GalleryPage />}></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* For desktop view, 3 cards in view */
+@media (min-width: 1024px) {
+  .team-card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* For mobile view, 1 card in view */
+@media (max-width: 1024px) {
+  .team-card-container {
+    display: block;
+    width: 100%;
+  }
+}

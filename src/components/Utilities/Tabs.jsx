@@ -18,7 +18,12 @@ const TabComponent = () => {
         "To identify and empower credible and committed Africans by providing them with the necessary skills, exposure, and opportunities to assume leadership positions for the benefit of their communities and nations.",
     },
 
-    { id: 2, label: "Excellence", content: "This is the content for Tab 3." },
+    {
+      id: 2,
+      label: "Integrity",
+      content:
+        "As we uphold the highest standards of honesty and ethical behavior in all our endeavors, we seek to promote a democracy that represents the people, characterized by transparency, accountability, and responsiveness. We stand on the position that leaders should be held accountable for their actions and decisions, and are expected to be transparent in their decision-making processes. Citizens have the right to access information, participate in public debates, and provide feedback on policies and initiatives.",
+    },
   ];
 
   return (

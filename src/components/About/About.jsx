@@ -9,6 +9,7 @@ import {
   StyledSpan,
 } from "../GeneralStyles/Headings/Headings.styles";
 import TabComponent from "../Utilities/Tabs";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div
@@ -33,7 +34,7 @@ const About = () => {
         <img
           src={hatBoy}
           alt="About bg"
-          className="h-[50%] w-[50%] md:w-[60%] rounded-[3rem] object-cover absolute bottom-[-10%] right-[-4rem] border-[0.5rem] border-white"
+          className="h-[50%] w-[50%] md:w-[60%] rounded-[3rem] object-cover absolute bottom-[-10%] right-[-4rem] border-[0.5rem] border-white hidden md:block"
           style={{
             maxHeight: "100%",
             maxWidth: "100%",
@@ -46,17 +47,17 @@ const About = () => {
           Welcome to Social Impact Catalyst Network Initiative
         </StyledH2Colored>
         <StyledH1>
-          A world where <StyledSpan>poverty</StyledSpan> will not exists
+          Empowering Africa’s Future <StyledSpan>Leaders</StyledSpan>
         </StyledH1>
         <StyledParagraph>
-          African Leadership Initiative (ALI), was founded with the aim to
-          identify, develop, and support the next generation of African leaders
-          who have the potential to drive positive change and development in
-          &nbsp;
+          Social Impact Catalyst Network Initiative (SICNI) was founded with the
+          aim to identify, develop, and support the next generation of African
+          leaders who have the potential to drive positive change and
+          development in &nbsp;
           <span>
-            <a href="" className="text-secondary">
+            <Link className="text-secondary" to={"/about"}>
               More...
-            </a>
+            </Link>
           </span>
         </StyledParagraph>
 

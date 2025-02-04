@@ -1,5 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FancyButton } from "../Button/Button.style";
@@ -12,7 +10,7 @@ import {
 import ProgressBar from "../ProgressBar";
 import { Data } from "./Data";
 
-const Causes = () => {
+const CausesPageContent = () => {
   return (
     <div className="mt-14 md:mt-[4rem] mb-[4rem]">
       <StyledH1 className="mb-[4rem] text-center p-[2rem]">
@@ -20,19 +18,9 @@ const Causes = () => {
       </StyledH1>
 
       {/* Swiper Carousel */}
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={20} // Space between slides
-        slidesPerView={1} // Default for mobile
-        breakpoints={{
-          768: { slidesPerView: 3 }, // Show 3 per view on large screens
-        }}
-        navigation
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // Auto-slide every 3 seconds
-        className="px-4"
-      >
+      <div className="flex flex-wrap gap-4 ">
         {Data.map((item) => (
-          <SwiperSlide key={item.id} className="p-3">
+          <div key={item.id} className="p-3 w-[100%] md:w-[32.3%]">
             <div
               className="box rounded-[1rem] shadow-lg transition-all ease-in group"
               style={{
@@ -75,11 +63,11 @@ const Causes = () => {
 
               <FancyButton>Donate now</FancyButton>
             </div>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </div>
     </div>
   );
 };
 
-export default Causes;
+export default CausesPageContent;
