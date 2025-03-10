@@ -2,7 +2,8 @@ import styled from "styled-components";
 export const StyledMainNav = styled.nav`
   display: flex;
   justify-content: space-between;
-  background-color: ${(props) => props.theme.light.primary};
+  background-color: ${(props) => props.theme.light.bg};
+
   height: 10vh;
   padding: 2.5rem 2rem;
   align-items: center;

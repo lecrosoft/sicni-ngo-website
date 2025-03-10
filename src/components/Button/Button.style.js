@@ -14,8 +14,8 @@ const rotate = keyframes`
 
 export const StyledButton = styled.button`
   color: ${(props) => (props.variant === "outline" ? "red" : "white")};
-  background-color: ${(props) =>
-    props.variant === "outline" ? "green" : "red"};
+  /* background-color: ${(props) =>
+    props.variant === "outline" ? "green" : "red"}; */
   transition: 0.5s all ease-in-out;
   padding: 0.7rem 2.5rem;
   outline: none;
@@ -34,10 +34,10 @@ export const StyledButton = styled.button`
 
 // Fancy Button with CRAZY hover effects
 export const FancyButton = styled(StyledButton)`
-  background-image: linear-gradient(to right, #00adef 0%, #00cbef 100%);
+  background-image: linear-gradient(to right, #aa30b8 0%, #aa30b8 100%);
   /* transform: skew(-5deg, -5deg); */
   position: relative;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out alternate infinite;
 
   &::before {
     content: "";
@@ -53,7 +53,7 @@ export const FancyButton = styled(StyledButton)`
   }
 
   &:hover {
-    background-image: linear-gradient(to right, #00cbef 0%, #00adef 100%);
+    background-image: linear-gradient(to right, #bca125 0%, #aa30b8 100%);
     animation: ${pulse} 0.4s ease-in-out alternate infinite;
     transform: skew(5deg, 5deg) scale(1.1);
   }
@@ -79,12 +79,12 @@ export const CrazyRotateButton = styled(StyledButton)`
 
 // Glow effect button
 export const GlowButton = styled(StyledButton)`
-  background: linear-gradient(45deg, #00cbef, #00adef);
-  box-shadow: 0 0 5px #ff416c, 0 0 25px #ff4b2b;
+  background: linear-gradient(45deg, #aa30b8, #c99dcb);
+  box-shadow: 0 0 5px #ff416c, 0 0 25px #bca125;
   transition: 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 20px #ff416c, 0 0 40px #ff4b2b;
+    box-shadow: 0 0 20px #bca125, 0 0 40px #ff4b2b;
     transform: scale(1.1);
   }
 `;

@@ -5,7 +5,8 @@ export default {
     extend: {
       fontFamily: { Oswald: ["Oswald", "san-serif"] },
       colors: {
-        secondary: "#00adef",
+        secondary: "#bca125",
+        primary: "#aa30b8",
       },
     },
   },

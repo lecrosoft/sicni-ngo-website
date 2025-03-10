@@ -33,7 +33,8 @@ export const StyledH3 = styled(motion.h3)`
 
 export const StyledSpan = styled(StyledH1)`
   padding: 0 16px;
-  background-color: ${(props) => props.theme.dark.secondary};
+  font-size: 45px;
+  background-color: ${(props) => props.theme.dark.primary};
   color: ${(props) => props.theme.dark.text};
   display: inline-block;
   --tw-skew-x: -12deg;
@@ -53,10 +54,14 @@ export const StyledParagraph = styled(motion.p)`
   font-size: 16px;
   font-weight: 500;
   color: rgb(113 128 150 / var(--tw-text-opacity));
+  white-space: pre-line;
+  line-height: 1.8; /* Adjust for better readability */
+  margin-bottom: 1.5rem; /* Adds spacing between paragraphs */
 `;
 
 export const MoreDetailsLink = styled(StyledParagraph)`
   color: ${(props) => props.theme.light.secondary};
+  cursor: pointer;
 `;
 
 export const StyledH2Colored = styled(StyledH2)`

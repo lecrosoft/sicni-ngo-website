@@ -59,7 +59,7 @@ const Contact = () => {
               Get In Touch
             </StyledParagraph>
             <StyledH1 className="mb-4 text-2xl font-semibold text-center md:text-2xl">
-              Send Us Your Message for Donation!
+              Send Us Your Message!
             </StyledH1>
           </div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
             <div className="form-group">
               <StyledButton
                 type="submit"
-                className={`w-full md:w-[170px] mx-auto transition-all ease-in-out duration-300 ${
+                className={`w-full md:w-[170px] mx-auto transition-all ease-in-out duration-300  bg-primary ${
                   isSubmitting
                     ? "bg-gray-400 cursor-not-allowed"
                     : "bg-amber-200 hover:bg-amber-300"

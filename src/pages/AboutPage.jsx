@@ -1,8 +1,9 @@
 import AboutForPage from "../components/About/AboutForPage";
 import AboutHero from "../components/About/AboutHero";
+import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer/Footer";
 import MainNav from "../components/Nav/MainNav";
-import OurTeam from "../components/ourTeam/ourTeam";
+// import OurTeam from "../components/ourTeam/ourTeam";
 
 const AboutPage = () => {
   return (
@@ -10,7 +11,8 @@ const AboutPage = () => {
       <MainNav />
       <AboutHero />
       <AboutForPage />
-      <OurTeam />
+      <CallToAction />
+      {/* <OurTeam /> */}
       <Footer />
     </div>
   );

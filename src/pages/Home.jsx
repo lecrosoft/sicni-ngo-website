@@ -1,22 +1,27 @@
-import About from "../components/About/About";
-import Categories from "../components/Categories/Categories";
-import Causes from "../components/Causes/Causes";
-import Contact from "../components/Contact/Contact";
+// import About from "../components/About/About";
+// import CallToAction from "../components/CallToAction";
+import JobCategories from "../components/Categories/JobCategories";
+// import Causes from "../components/Causes/Causes";
+import Cta from "../components/Cta/Cta";
+
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
+import JobList from "../components/JobList/JobList";
 import MainNav from "../components/Nav/MainNav";
-import OurTeam from "../components/ourTeam/ourTeam";
 
 const Home = () => {
   return (
     <div className="">
       <MainNav />
       <Hero />
-      <Categories />
-      <About />
-      <Causes />
-      <Contact />
-      <OurTeam />
+      <Cta />
+      <JobCategories />
+      {/* <About /> */}
+      <JobList />
+
+      {/* <CallToAction /> */}
+      {/* <Causes /> */}
+
       <Footer />
     </div>
   );

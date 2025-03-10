@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import heroBg from "../../assets/whiteImageBg.jpeg";
-import sicgroupPics1 from "../../assets/sicgrouppics1.jpg";
+import sicgroupPics1 from "../../assets/techBoy2.jpeg";
 import { FancyButton } from "../Button/Button.style";
 import {
   StyledH1,
   StyledParagraph,
   StyledSpan,
 } from "../GeneralStyles/Headings/Headings.styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const textOptions = [
-  "Transform Africa",
-  "Empower Leaders",
-  "Drive Change",
-  "Inspire the Future",
+  "Meet Opportunity",
+  "Show Your Skills",
+  "Land Your Dream Job",
+  "Turn Passion into Career",
 ];
 
 const Hero = () => {
@@ -48,13 +50,13 @@ const Hero = () => {
       }}
     >
       <motion.div
-        className="textDiv w-[100%] pt-[2.5rem] md:pt-[4rem] md:w-[50%]"
+        className="textDiv w-[100%] pt-[2.5rem] md:pt-[4rem] md:w-[60%]"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
         <StyledH1>
-          Join the Movement:{" "}
+          Got Talent? <br></br>
           <StyledSpan>
             <motion.span
               key={displayText}
@@ -68,15 +70,28 @@ const Hero = () => {
           </StyledSpan>
         </StyledH1>
         <StyledParagraph>
-          Africa’s future depends on strong, ethical, and visionary leaders. At
-          Social Impact Catalyst Network Initiative (SICNI), we empower the next
-          generation with the skills, knowledge, and support they need to drive
-          positive change in their communities. Join us in shaping a better
-          tomorrow.
+          Connecting top creative minds with the best opportunities. At Next
+          Best Creative Hot Bed, we bring you verified, fresh job listings
+          straight from recruiters and employers—designed to fuel your career
+          growth and ignite your passion.
         </StyledParagraph>
 
-        <div className="buttonDiv">
-          <FancyButton>Donate</FancyButton>
+        <div className="flex flex-col gap-3 buttonDiv md:flex-row">
+          <input
+            type="text"
+            placeholder="Enter key word"
+            className="p-3 rounded-[0.4rem] border-2 border-primary "
+          />
+
+          <select className="p-3 rounded-[0.4rem] border-2 border-primary">
+            <option value="">Select Job Type</option>
+            <option value="">Remote</option>
+            <option value="">Hybrid</option>
+          </select>
+          <FancyButton>
+            {" "}
+            <FontAwesomeIcon icon={faMagnifyingGlass} /> Find a job
+          </FancyButton>
         </div>
       </motion.div>
 

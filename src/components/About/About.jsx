@@ -8,7 +8,7 @@ import {
   StyledParagraph,
   StyledSpan,
 } from "../GeneralStyles/Headings/Headings.styles";
-import TabComponent from "../Utilities/Tabs";
+// import TabComponent from "../Utilities/Tabs";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
@@ -50,18 +50,27 @@ const About = () => {
           Empowering Africa’s Future <StyledSpan>Leaders</StyledSpan>
         </StyledH1>
         <StyledParagraph>
-          Social Impact Catalyst Network Initiative (SICNI) was founded with the
-          aim to identify, develop, and support the next generation of African
-          leaders who have the potential to drive positive change and
-          development in &nbsp;
+          Social Impact Catalyst Network Initiative (SICNI), was founded with
+          the aim to identify, develop, and support the next generation of
+          African leaders who have the potential to drive positive change and
+          development in their communities and countries. SICNI recognizes the
+          importance of strong and visionary leadership in addressing the
+          complex challenges facing the African continent, and believes that
+          investing in leadership development is crucial for sustainable
+          progress. SICNI was established by a group of experienced and
+          passionate individuals who have a deep commitment to Africa and a
+          strong belief in the potential of its people. They saw a need for a
+          platform that could nurture and empower emerging leaders, providing
+          them with the skills, knowledge, and networks needed to make a
+          meaningful impact in their respective fields.
           <span>
             <Link className="text-secondary" to={"/about"}>
               More...
             </Link>
           </span>
         </StyledParagraph>
-
-        <TabComponent />
+        {/* 
+        <TabComponent /> */}
         {/* <div className="buttonDiv">
           <GiveButton>Learn More</GiveButton>
         </div> */}

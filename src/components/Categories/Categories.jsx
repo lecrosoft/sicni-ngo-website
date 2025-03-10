@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { StyledContainer } from "../GeneralStyles/GeneralStyles.style";
 import {
   MoreDetailsLink,
@@ -11,6 +11,10 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Categories = () => {
+  const navigate = useNavigate();
+  const handleClick = (item) => {
+    navigate("/category-details", { state: { item } });
+  };
   return (
     <motion.div
       className="mt-14 md:mt-10"
@@ -50,9 +54,10 @@ const Categories = () => {
 
             <StyledParagraph>Donate For</StyledParagraph>
             <StyledH2>{item.title}</StyledH2>
-            <Link>
-              <MoreDetailsLink>More details..</MoreDetailsLink>
-            </Link>
+
+            <MoreDetailsLink onClick={() => handleClick(item)}>
+              More details..
+            </MoreDetailsLink>
 
             {/* Floating Circle Image */}
             <motion.img
